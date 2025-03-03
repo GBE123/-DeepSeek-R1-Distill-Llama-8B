@@ -1,8 +1,13 @@
 # 微调-DeepSeek-R1-Distill-Llama-8B
+
 利用qlora进行微调DeepSeek-R1-Distill-Llama-8B
+
 运行环境:i512400f+内存64+显存16G(3080)
+
 torch: 2.5.1+cu118
+
 transformers: 4.49.0
+
 ================================================================================================================================
 1、从hf下载DeepSeek-R1-Distill-Llama-8B，大约15G
 https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-8B
