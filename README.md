@@ -15,21 +15,33 @@ transformers: 4.49.0
 https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-8B
 
 2、利用满血版deepseek-r1按以下格式生成200条语料，保存为数据集
+
  {
+ 
     "messages": [
+    
       {"role": "system", "content": "你是一名资深证券分析师"},
+      
       {"role": "user", "content": "如何计算动态市盈率？"},
+      
       {"role": "assistant", "content": "动态市盈率=当前股价/（最新季度每股收益×4）。例如某股现价20元，Q1每股收益0.5元，则动态PE=20/(0.5×4)=10倍"}
+      
     ]
+    
   }
 
 3、编写python基于qlora+gradio框架微调代码
 
 4、指定微调参数，运行开始训练
+
     4.1.数据集加载并向量化
+    
     4.2.加载基础模型DeepSeek-R1-Distill-Llama-8B
+    
     4.3.微调开始
+    
     4.4.微调完成合并模型DeepSeek-R1-Distill-Llama-8B-STOCK，大约15G
+    
     4.5.使用微调后模型进行对话
     
 5、分析和对比基础模型对话效果，是否有改进
