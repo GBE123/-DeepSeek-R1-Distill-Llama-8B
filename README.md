@@ -33,11 +33,18 @@ https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-8B
 python WT_R1_Distill_Llama_8B.py
 依赖库慢慢一个一个的装吧
 
-在低参数，低数据量的情况完成一次微调大约5分钟，本次微调遇到的问题较多，集中在以下方面
+在低参数，低数据量的情况完成一次微调大约5分钟，本次微调遇到的问题较多，集中在以下方面:
+
 1、数据集的预处理，需要完全按照DeepSeek-R1-Distill-Llama-8B进行处理，数据长度，数据尺寸对齐等问题将引发问题
+
 2、显存不够,在开启int4量化情况下训练5轮，每批次加载6条数据，显存占用14G左右
+
 3、训练完成模型合并需要大约25G显存,只能使用内存处理
+
 4、推理速度比ollama管理下慢很多，就算是ollama运行DeepSeek-R1-Distill-Qwen-14B也比较快。
+
 说明ollama做了不少优化。
+
 5、推理结果直接打印控制台正常，交互到gradio页面存在个别字乱码
+
 6、需要使用流式训练和推理
