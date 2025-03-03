@@ -9,7 +9,9 @@ torch: 2.5.1+cu118
 transformers: 4.49.0
 
 ================================================================================================================================
+
 1、从hf下载DeepSeek-R1-Distill-Llama-8B，大约15G
+
 https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-8B
 
 2、利用满血版deepseek-r1按以下格式生成200条语料，保存为数据集
