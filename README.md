@@ -1,9 +1,9 @@
-# -DeepSeek-R1-Distill-Llama-8B
+# 微调-DeepSeek-R1-Distill-Llama-8B
 利用qlora进行微调DeepSeek-R1-Distill-Llama-8B
 运行环境:i512400f+内存64+显存16G(3080)
 torch: 2.5.1+cu118
 transformers: 4.49.0
-
+================================================================================================================================
 1、从hf下载DeepSeek-R1-Distill-Llama-8B，大约15G
 https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-8B
 
@@ -29,9 +29,10 @@ https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-8B
 
 6、重复2,4,5步
 
-本次微调的代码已经上传github:
+=====================================================================================================================================
 python WT_R1_Distill_Llama_8B.py
-依赖库慢慢一个一个的装吧
+训练完毕之后，输入：你是一名资深证券分析师，如何计算动态市盈率？请用中文回答
+进行推理回答
 
 在低参数，低数据量的情况完成一次微调大约5分钟，本次微调遇到的问题较多，集中在以下方面:
 
